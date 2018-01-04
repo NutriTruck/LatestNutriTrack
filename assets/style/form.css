@@ -1,0 +1,52 @@
+/*this css file is for the Main Login-Page*/
+
+*{  
+  margin:0;
+  padding:0;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+body {
+  background-color:#167bd7; 
+  width:80%;
+  margin: auto;
+}
+
+#logo-img{
+  padding-top: 40px;
+  margin:auto; 
+  display:block;
+
+}
+
+#logo-main{
+  width:150px;
+  margin:auto; 
+  display:block;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  font-size: 60px;
+}
+
+h2{
+  color: white;
+  font-size: 30px; 
+}
+
+
+#form{
+  background-color:rgba(255,255,255, 0.2);
+  padding:20px 20px;
+  border-radius:5px;
+  height:40%;
+}
+
+p{
+  font-size: 20px; 
+  color: white;
+  font-family: raleway; 
+}
