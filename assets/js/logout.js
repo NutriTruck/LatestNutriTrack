@@ -21,6 +21,9 @@ var config = {
     var unixTime;
     var timeStamp;
     var time;
+    var pro; 
+    var itemName; 
+    var carb; 
 
     //handles current signin 
    firebase.auth().onAuthStateChanged(function(user) {
@@ -104,7 +107,7 @@ var config = {
 
                         item:item,
                         calories:cal,
-                        sugar:sug,
+                        sug:sug,
                         sodium:sodi,
                         fat:fat,
                         carbs:carb,
@@ -122,7 +125,7 @@ var config = {
                     var myChart = new Chart(ctx, {
                         type: 'polarArea',
                         data: {
-                            labels: ["Calories", "Sugar", "Sodium", "Fats", "Protein", "Carbs" ],
+                            labels: ["Calories", "Sugar", "Sodium", "Fats", "Protein", "Carbs"],
                             datasets: [{
                                 label: '# of Votes',
                                 data: [cal, sug, sodi, fat, pro,carb],
