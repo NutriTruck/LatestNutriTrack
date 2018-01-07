@@ -1,5 +1,4 @@
 // This Js File is for the LoginPage only. 
-
 $(document).ready(function() {
 //Initialize Firebase 
   var config = {
@@ -13,6 +12,7 @@ $(document).ready(function() {
   firebase.initializeApp(config);
 
   //Get Elements 
+  var txtName = $('#txtName'); 
   var txtEmail = document.getElementById('txtEmail');
   var txtPassword = document.getElementById('txtPassword');
   if (txtEmail.length < 4) {
@@ -26,42 +26,54 @@ $(document).ready(function() {
   var btnLogin = document.getElementById('btnLogin'); 
   var btnSignUp = document.getElementById('btnSignUp'); 
   var btnLogout = document.getElementById('btnLogout');
+//Hidden Name: 
+$('.registerName').hide();
+$('#btnSignUp').hide(); 
 
+
+//hanldes Registration Button
+
+$('#btnRegiter').on('click', function(){
+  event.preventDefault(); 
+  $('.registerName').show();
+  $('#btnSignUp').show(); 
+}); 
+
+  //Handles Login/sign
   //add login event on click listener
   btnLogin.addEventListener('click', e=>{
     event.preventDefault(); 
-  	//Get email and pass 
-  	var email = txtEmail.value; 
-  	var pass = txtPassword.value; 
-  	var auth = firebase.auth(); 
-  	// sign in 
-  	var promise = auth.signInWithEmailAndPassword(email, pass); 
-  	promise.catch(e => console.log(e.message)); 
-    alert("The password is invalid or the user does not have a password."); 
+    //Get email and pass 
+    var email = txtEmail.value; 
+    var pass = txtPassword.value; 
+    var auth = firebase.auth(); 
+    // sign in 
+    var promise = auth.signInWithEmailAndPassword(email, pass); 
+    promise.catch(e => console.log(e.message)); 
+    alert("Logging in"); 
   }); 
 
-
-  //add signUp Event
+//Hanldes SignUP
   btnSignUp.addEventListener('click', e=>{
-  	//Get email and pass
+    //Get email and pass
     //TO DO: check for real emails 
     event.preventDefault(); 
     alert("You've Signed up"); 
-  	var email = txtEmail.value; 
-  	var pass = txtPassword.value; 
-  	var auth = firebase.auth(); 
-  	// sign in 
-  	var promise = auth.createUserWithEmailAndPassword(email, pass); 
-  	promise.catch(e => console.log(e.message));
-  }); 
+    var email = txtEmail.value; 
+    var pass = txtPassword.value; 
+    var auth = firebase.auth(); 
+    // sign in 
+    var promise = auth.createUserWithEmailAndPassword(email, pass); 
+    promise.catch(e => console.log(e.message));
+  });  
 
-  btnLogout.addEventListener('click', e=>{
-    firebase.auth().signOut(); 
-    console.log('clicked')
-    alert('clicked'); 
-  }); 
+// //Hanldes SignOut / Log Out 
+//   btnLogout.addEventListener('click', e=>{
+//     firebase.auth().signOut(); 
+//     console.log('Users have logged Out');  
+//   }); 
 
-  //add a realtime Listener
+//add a realtime Listener /handles Realtime Logged in User
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -84,4 +96,4 @@ $(document).ready(function() {
   }
 });
 
-}); 
+});   
