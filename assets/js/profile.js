@@ -166,7 +166,7 @@ storageRef.child('profiles/profile.png').getDownloadURL().then(function(url) {
   // Or inserted into an <img> element:
   var img = document.getElementById('default-img');
   img.src = url;
-  $("#fileButton").hide();
+  
 }).catch(function(error) {
   // Handle any errors
 });

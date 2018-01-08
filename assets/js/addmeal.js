@@ -135,7 +135,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                 };
 
                 database.ref().push(newMeal);
-                var ctx = $("#myChart")
+                var ctx = $("#myChart"); 
                 var myChart = new Chart(ctx, {
                         type: 'polarArea',
                         data: {
@@ -164,14 +164,18 @@ firebase.auth().onAuthStateChanged(function(user) {
                         }]
                     },
                     options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero:true
+                            legend: {
+                                
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero:true, 
+                                                fontColor:'white'
+                                            }
+                                        }]
                                     }
-                                }]
+                                }    
                             }
-                        }
                     }); // my chart
                 });  //2nd Ajax
             }); //1st Ajax

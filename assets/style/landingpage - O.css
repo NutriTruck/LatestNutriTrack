@@ -80,7 +80,6 @@ label {
 #add-meal-btn,
 #reportGen-btn {
     margin: 10px 0;
-    
 }
 
 button:hover {
@@ -101,7 +100,7 @@ button:hover {
   justify-content: center;
   padding: 20px; 
   align-content: center; 
-  
+  margin: 
 }
 
 p{
@@ -197,39 +196,4 @@ section{
 } 
 ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-}
-
-/* Media Responsive*/
-@media only screen and (max-width: 600px) {
-    #logo-main {
-        display: none
-        
-    } 
-    
-    #profilepicture {
-    /* basic responsive img */
-	max-width: 30%;
-	height: auto;
-	width: auto;  
-        
-    }
-    .branding{
-        font-size: 50px;
-        margin: 0 auto;
-        padding: 0;
-    }
-    
-   #spoon3 {
-    /* basic responsive img */
-	max-width: 100%;
-	height: auto;
-	width: auto;  
-        
-    }
-    
-    
-    
-    
-    
-    
 }

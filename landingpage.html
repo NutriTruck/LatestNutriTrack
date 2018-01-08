@@ -34,7 +34,7 @@
     <!--header--> 
     <div class="container-fluid">
         <div class="row justify-content-around">
-            <div class="largenav pull-left" id="branding">
+            <div class="largenav pull-left">
                 <!--Header Logo--> 
                 <img src="assets/images/logo.png" alt="nutri-track-logo" id="logo-main" width="120px">
                 <!--Header App Name--> 
@@ -44,15 +44,15 @@
             <!-- Profile Button--> 
             <div class="largenav pull-right">
                 <a href="profile.html">
-                  <img src="assets/images/profile.png" alt="my profile" width="100px"/>
+                  <img src="assets/images/profile.png" alt="my profile" id = "profilepicture" width="100px"/>
                 </a>
-                <a href="addMeal.html"> <button type="submit" class="btn btn-secondary btn-lg" id="btn-add-meal-page">Add Meal</button></a>
+             
                 <button type="submit" class="btn btn-secondary btn-lg" id="btnLogout">Sign out</button>
             </div>
         </div>
         
         <div class="main-container">
-            <div> <h1> Hello <span id='user-name-display'> UserName </span></h1>
+      
             <div class="row justify-content-around">
                 <div class="col-4">
                     <form class="form-inline" action="/action_page.php">
@@ -78,7 +78,7 @@
             <div class="row row3" id="graphic-containers">
                 
                 <div class="col col-lg-5">
-                    <img src="assets/images/spoon3.png" alt="my profile" width=650px/>
+                    <img src="assets/images/spoon3.png" alt="spoon3" id = "spoon3" width=650px/>
                 </div>
                 
 <!--                 <div class="col col-lg-2" id="food">
@@ -95,17 +95,21 @@
                             <div class="tbl-content" id="itemName"></div>
                         </div>
                 </div>
+                
+                
+               <a href="addMeal.html"> <button type="submit" class="btn btn-secondary btn-lg" id="btn-add-meal-page">Add Meal</button></a>
+                
             </div>
         
             
-            <div class="row justify-content-around">
+           
            <!--      <div class="largenav pull-right">
                     <input type="text" name="itemName" id="item" placeholder="Add Meal">
                     <button type="submit" class="btn btn-secondary" id="add-meal-btn">Add meal</button>
                 </div> -->
-            </div>
+          
         </div> <!--Main Container--> 
-    </div> <!-- Container Fluid--> 
+  <!-- Container Fluid--> 
 
 
     <!--JQuery-->
