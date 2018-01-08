@@ -167,9 +167,10 @@ td{
 }
 
 #imager,
-#input-group{
+#input-group,
+#default-img {
 
-  margin: 20px;
+  margin: 0px auto;
   padding:20px;
 }
 
