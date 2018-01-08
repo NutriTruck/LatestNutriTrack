@@ -89,51 +89,54 @@ $(document).ready(function() {
           console.log(downloadURL);
       });
   });
-  //hanldes indentity input sumbission 
-  // function formSubmit(){
-    $("#done-btn").on("click", function () {
-        alert('clicked'); 
-        event.preventDefault();
-        firstName = $("#userName").val().trim();
-        lastName = $("#lastName").val().trim();
-        writeUserData();
-        dbcheck();   
-      }); //done-btn
-// }
-
-// formSubmit(); 
+  
 
 
+//   //hanldes indentity input sumbission 
+//   // function formSubmit(){
+//     $("#done-btn").on("click", function () {
+//         alert('clicked'); 
+//         event.preventDefault();
+//         firstName = $("#userName").val().trim();
+//         lastName = $("#lastName").val().trim();
+//         writeUserData();
+//         dbcheck();   
+//       }); //done-btn
+// // }
 
-function writeUserData() { 
-    var data = firebase.database().ref().push({
-      'usersInfo':{
-      firstName: firstName,
-      lastName:lastName,
-      dateAdded: firebase.database.ServerValue.TIMESTAMP
-    }
-  }); 
-  var key = data.key; 
+// // formSubmit(); 
 
-  }
 
-function dbcheck() {
- database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {            
-    event.preventDefault(); 
-    var sv = snapshot.val();      
-    // console.log(sv.usersInfo.dateAdded); 
-    console.log(sv.usersInfo.lastName);
-    console.log(sv.usersInfo.firstName);
-    // Change the HTML to reflect             
-      $("#fname-display").text(snapshot.val().usersInfo.firstName); 
-      $("#lname-display").text(snapshot.val().usersInfo.lastName);
+
+// function writeUserData() { 
+//     var data = firebase.database().ref().push({
+//       'usersInfo':{
+//       firstName: firstName,
+//       lastName:lastName,
+//       dateAdded: firebase.database.ServerValue.TIMESTAMP
+//     }
+//   }); 
+//   var key = data.key; 
+
+//   }
+
+// function dbcheck() {
+//  database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {            
+//     event.preventDefault(); 
+//     var sv = snapshot.val();      
+//     // console.log(sv.usersInfo.dateAdded); 
+//     console.log(sv.usersInfo.lastName);
+//     console.log(sv.usersInfo.firstName);
+//     // Change the HTML to reflect             
+//       $("#fname-display").text(snapshot.val().usersInfo.firstName); 
+//       $("#lname-display").text(snapshot.val().usersInfo.lastName);
            
-  });
-};
+//   });
+// };
 
 
-// dbcheck();
-// // }); 
+// // dbcheck();
+// // // }); 
 
 //retrieve the Image: 
 // Create a reference with an initial file path and name
