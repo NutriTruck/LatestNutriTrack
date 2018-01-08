@@ -175,6 +175,10 @@ td{
   padding:20px;
 }
 
+#myChart{
+  position:absolute;
+  left:300px;
+}
 #name{
   padding:10px; 
 }
