@@ -20,6 +20,11 @@
 
     <!--Firebase-->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+    <!--Chart.JS--> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+
 </head>
 
 <body>
@@ -55,8 +60,12 @@
                             <div class="tbl-content" id="itemName"></div>
                         </div>
                 </div>
+            
+            <div class="col col-lg-12">
+                <canvas id="myChart" width="200" height="150"></canvas>
             </div>
 
+            <div class="col col-lg-2" id="food"> </div>
  
                     
 
@@ -66,7 +75,8 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
+   
 
 
     <!--JQuery-->
