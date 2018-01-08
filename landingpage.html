@@ -23,6 +23,7 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+       
 
     <!--Fevicon-->
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -71,6 +72,7 @@
                             </script>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg" id="reportGen-btn">Generate</button>
+                        <button type="reset" value="Reset" class="btn btn-primary btn-lg" id="reset">Reset</button>
                     </form>
                 </div>
             </div>
@@ -81,23 +83,21 @@
                     <img src="assets/images/spoon3.png" alt="spoon3" id = "spoon3" width=650px/>
                 </div>
                 
-<!--                 <div class="col col-lg-2" id="food">
-
+               <div class="col col-lg-4">
+                    <canvas id="myChart" width="200" height="200"></canvas>
                 </div>
-                <div class="col col-lg-5">
-                    <canvas id="myChart" width="200" height="150"></canvas>
-                </div> -->
             </div>    
              
-            <div class ="col-sm-12">
+             <div class ="col-sm-12">
                 <div class="row" id="table">
                             <div id = "tableHeader"></div>
                             <div class="tbl-content" id="itemName"></div>
+                            <div class="tbl-content" id="total"></div>
                         </div>
                 </div>
                 
                 
-               <a href="addMeal.html"> <button type="submit" class="btn btn-secondary btn-lg" id="btn-add-meal-page">Add Meal</button></a>
+               <!-- <a href="addMeal.html"> <button type="submit" class="btn btn-secondary btn-lg" id="btn-add-meal-page">Add Meal</button></a> -->
                 
             </div>
         
